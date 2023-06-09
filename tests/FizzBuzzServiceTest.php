@@ -2,16 +2,17 @@
 
 namespace Tests;
 
-use App\Service\FizzBuzzService as AppFizzBuzzService;
+use App\Service\FizzBuzzService;
+use App\Mapper\FizzBuzzMapper;
 use PHPUnit\Framework\TestCase;
 
 class FizzBuzzServiceTest extends TestCase
 {
-    private AppFizzBuzzService $fizzBuzzService;
+    private FizzBuzzService $fizzBuzzService;
 
     protected function setUp(): void
     {
-        $this->fizzBuzzService = new AppFizzBuzzService();
+        $this->fizzBuzzService = new FizzBuzzService(new FizzBuzzMapper());
     }
 
     public function testGenerateFizzBuzzSequence(): void

@@ -2,25 +2,22 @@
 
 namespace App\Service;
 
+use App\Mapper\NumberMapperInterface;
+
 class FizzBuzzService
 {
+    public function __construct(private NumberMapperInterface $numberTransformer)
+    {
+    }
     /**
      * @return array<int,string>
      */
-    public function generate(string $start, string $end): array
+    public function generate(int $start, int $end): array
     {
         $output = [];
 
         for ($i = $start; $i <= $end; $i++) {
-            if ($i % 3 === 0 && $i % 5 === 0) {
-                $output[] = 'FizzBuzz';
-            } elseif ($i % 3 === 0) {
-                $output[] = 'Fizz';
-            } elseif ($i % 5 === 0) {
-                $output[] = 'Buzz';
-            } else {
-                $output[] = $i;
-            }
+            $output[] = $this->numberTransformer->transform($i);
         }
 
         return $output;

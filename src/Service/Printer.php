@@ -14,7 +14,7 @@ class Printer
     {
         $this->inputValidator->validateInput($start, $end);
 
-        $sequence = $this->fizzBuzzService->generate($start, $end);
+        $sequence = $this->fizzBuzzService->generate((int)$start, (int)$end);
 
         foreach ($sequence as $number) {
             echo $number . PHP_EOL;

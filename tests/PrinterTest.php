@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Mapper\FizzBuzzMapper;
 use App\Service\Printer;
 use App\Service\FizzBuzzService;
 use App\Validation\InputValidator;
@@ -16,7 +17,7 @@ class PrinterTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->fizzBuzzService = new FizzBuzzService();
+        $this->fizzBuzzService = new FizzBuzzService(new FizzBuzzMapper());
         $this->inputValidator = new InputValidator();
         $this->printer = new Printer($this->fizzBuzzService, $this->inputValidator);
     }
@@ -31,6 +32,7 @@ class PrinterTest extends TestCase
 
         foreach ($invalidInputs as $input) {
             $this->expectException(InvalidArgumentException::class);
+            $this->expectExceptionMessage('Invalid input. Please provide positive numeric values where the start is less than or equal to the end.');
             $this->printer->printFizzBuzz($input[0], $input[1]);
         }
     }
