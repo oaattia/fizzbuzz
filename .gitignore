@@ -1,0 +1,9 @@
+.DS_Store
+.idea/
+log.txt
+outputfile.csv
+test.csv
+vendor
+
+.phpunit.result.cache
+.php-cs-fixer.cache
