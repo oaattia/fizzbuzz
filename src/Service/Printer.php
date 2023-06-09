@@ -10,7 +10,7 @@ class Printer
     {
     }
 
-    public function printFizzBuzz(int $start, int $end): void
+    public function printFizzBuzz(string $start, string $end): void
     {
         $this->inputValidator->validateInput($start, $end);
 

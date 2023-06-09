@@ -7,7 +7,7 @@ class FizzBuzzService
     /**
      * @return array<int,string>
      */
-    public function generate(int $start, int $end): array
+    public function generate(string $start, string $end): array
     {
         $output = [];
 
