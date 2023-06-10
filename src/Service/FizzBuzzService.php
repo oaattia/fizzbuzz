@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Service;
 
 use App\Mapper\NumberMapperInterface;
 
 class FizzBuzzService
 {
-    public function __construct(private NumberMapperInterface $numberTransformer)
+    public function __construct(private NumberMapperInterface $numberMapper)
     {
     }
     /**
@@ -17,7 +19,7 @@ class FizzBuzzService
         $output = [];
 
         for ($i = $start; $i <= $end; $i++) {
-            $output[] = $this->numberTransformer->transform($i);
+            $output[] = $this->numberMapper->transform($i);
         }
 
         return $output;

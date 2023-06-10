@@ -1,11 +1,8 @@
 <?php
 
 use App\Validation\InputValidator;
-
 use App\Service\FizzBuzzService;
-
 use App\Mapper\FizzBuzzMapper;
-
 use App\Service\Printer;
 
 require __DIR__.'/vendor/autoload.php';

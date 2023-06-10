@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Service;
 
 use App\Service\FizzBuzzService;
 use App\Mapper\FizzBuzzMapper;

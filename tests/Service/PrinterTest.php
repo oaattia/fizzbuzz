@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Service;
 
 use App\Mapper\FizzBuzzMapper;
 use App\Service\Printer;

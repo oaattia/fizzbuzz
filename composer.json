@@ -8,10 +8,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        },
-        "files": [
-            "console.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

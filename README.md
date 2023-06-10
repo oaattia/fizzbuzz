@@ -1,16 +1,7 @@
 # FizzBuzz
 
-Write a program that prints the numbers from 1 to 100. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
+Prints the numbers from 1 to 100. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
 
-### Technology
-You can write plain-php code or use a framework for this challenge. 
-
-Please use PHP 7.1+, strict typing and object oriented programming. 
-
-Also provide some Unit-Tests to verify the sample output.
-
-### Summary
-This coding challenge shouldn't take more than 2 hours. Please provide us a github/bitbucket link when you're done.
 
 ### Sample-Output
 ```
@@ -35,4 +26,41 @@ Fizz
 19
 Buzz
 ... etc up to 100
+```
+
+
+### Prerequisites
+- PHP (version 8.2 or higher)
+- Composer (for dependency management)
+- docker 
+- docker-compose
+
+### Installation 
+1. Clone the repo or download the source code
+2. Navigate to directory
+3. use docker-compose to install packages
+
+```
+docker-compose run --rm composer install
+```
+
+### Usage
+
+To use the application run the console php file like
+
+```
+docker-compose run --rm php
+```
+
+you should get prompt like the following 
+
+```
+Enter the starting number: 
+Enter the ending number:
+```
+
+### Run tests 
+
+```
+docker-compose run --rm php vendor/bin/phpunit
 ```
